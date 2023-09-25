@@ -1,0 +1,25 @@
+<mxfile host="Electron" modified="2023-09-25T17:56:43.936Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.7.5 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="rYYxLeHbAsBE7_zV5oUO" version="21.7.5" type="device">
+  <diagram name="Страница — 1" id="aAJz8PeIyYf9gtP4vZeT">
+    <mxGraphModel dx="795" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xnzVwGYOZmCi8FnU8yy7-1" value="Задача: Написать программу, которая из имеющегося массива&#xa;строк формирует новый массив из строк, длина которых меньше,&#xa;либо равна 3 символам. Первоначальный массив можно ввести&#xa;с клавиатуры, либо задать на старте выполнения алгоритма.&#xa;При решении не рекомендуется пользоваться коллекциями,&#xa;лучше обойтись исключительно массивами.&#xa;&#xa;Примеры:&#xa;[“Hello”, “2”, “world”, “:-)”] —&gt; [“2”, “:-)”]&#xa;[“1234”, “1567”, “-2”, “computer science”] —&gt; [“-2”]&#xa;[“Russia”, “Denmark”, “Kazan”] —&gt; []" style="text;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="10" y="10" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_jAE4F7uaUWW7qI_gUQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Z_jAE4F7uaUWW7qI_gUQ-1" target="Z_jAE4F7uaUWW7qI_gUQ-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_jAE4F7uaUWW7qI_gUQ-1" value="Начало" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="405" y="160" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_jAE4F7uaUWW7qI_gUQ-2" value="&lt;h1&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Легенда&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;array# – массивы, заданные в условии задачи&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="190" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_jAE4F7uaUWW7qI_gUQ-3" value="array1&lt;br&gt;array2&lt;br&gt;array3" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="410" y="225" width="60" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
