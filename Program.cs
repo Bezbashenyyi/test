@@ -21,11 +21,12 @@ string[] array3 = { "Russia", "Denmark", "Kazan" };
 
 void PrintArray(string[] arrayN)
 {
-    for (int i=0; i < arrayN.Length; i++)
-        Console.WriteLine(arrayN[i]);
+    Console.Write("[\"");
+    for (int i=0; i < arrayN.Length-1; i++)
+        Console.Write($"{arrayN[i]}\", \"");
+    Console.WriteLine($"{arrayN[arrayN.Length-1]}\"]");
 }
 
 Console.InputEncoding=Encoding.Unicode;
-string s=Console.ReadLine();
-Console.WriteLine(s);
-PrintArray(array3);
+
+PrintArray(array1);
