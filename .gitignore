@@ -1,1 +1,4 @@
-*.bkp
+bin/
+obj/
+*.sln
+*.csproj
