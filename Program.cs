@@ -15,18 +15,53 @@
 using System;
 using System.Text;
 
+// Для понимания кода, сверяйтесь с прилагаемой в репозитории блок-схемой алгоритма в формате «drowio».
+
+// Массивы, заданные в условии задачи:
+
 string[] array1 = { "Hello", "2", "world", ":-)" };
 string[] array2 = { "1234", "1567", "-2", "computer science" };
 string[] array3 = { "Russia", "Denmark", "Kazan" };
 
-void PrintArray(string[] arrayN)
+// Сборка и вывод конечного массива из трёх или меньшего количества элементов:
+
+void ThreeSymbols(string[] arrayIn)
 {
-    Console.Write("[\"");
-    for (int i=0; i < arrayN.Length-1; i++)
-        Console.Write($"{arrayN[i]}\", \"");
-    Console.WriteLine($"{arrayN[arrayN.Length-1]}\"]");
+    /*
+Для сборки конечного массива создаётся временный массив, в который будут
+собраны все строки с количеством символов меньше или равным трём. Размер временного
+массива задаётся равным размеру входящего массива. Поскольку размер конечного
+массива может отличаться от размера входящего массива, то вводим счётчик элементов,
+чтобы впоследствии создать конечный массив из требуемых элементов.
+*/
+
+    string[] tempArray = new string[arrayIn.Length]; // временный массив
+    uint elementCount = 0; // счётчик количества элементов конечного массива
+
+    for (int i = 0; i < arrayIn.Length; i++)
+    {
+        if (arrayIn[i].Length <= 3) // если длина строки в пределах трёх символов
+        {
+            tempArray[elementCount] = arrayIn[i]; // заносим строку во временный массив
+            elementCount++; // подсчитываем элемент, готовим следующую ячейку временного массива к приёму
+        }
+    }
+
+    if (elementCount != 0) // если найдена хотя бы одна строка, удовлетворяющая заданному условию
+    {
+        string[] outArray = new string[elementCount]; // размер конечного массива
+        // равен количеству занесённых во временный
+        // массив элементов
+        for (int i = 0; i < elementCount; i++)
+            outArray[i] = tempArray[i]; // перенос собранных элементов в конечный массив
+
+        Console.WriteLine("[\"{0}\"]", String.Join("\", \"", outArray)); // вывод собранного массива
+    }
+    else // если не найдена ни одна строка, удовлетворяющая заданному условию
+        Console.WriteLine(
+            "в заданном массиве отсутствуют элементы с меньшим "
+                + "или равным 3-ём количеством символов."
+        );
 }
 
-Console.InputEncoding=Encoding.Unicode;
-
-PrintArray(array1);
+Console.InputEncoding = Encoding.Unicode;
