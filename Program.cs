@@ -86,7 +86,7 @@ ConsoleKeyInfo input; // переменная для получения кода
 
 Repeat:
     Console.Write("Введите ряд строковых значений (без кавычек), разделяя их запятыми и/или пробелами: ");
-    string inString = Console.ReadLine(); // считывание введённой пользователем строки
+    string inString = Console.ReadLine()!; // считывание введённой пользователем строки
 
     if (inString.Length == 0)
         goto Repeat;
