@@ -76,3 +76,40 @@ void Examples(string[] arrayIn)
 
 Console.InputEncoding = Encoding.Unicode; // в консоли можно вводить символы Юникода, в т.ч. русские
 ConsoleKeyInfo input; // переменная для получения кода клавиши
+
+    Console.WriteLine("Программа из заданного массива собирает массив, содержащий строки из меньшего, или " +
+        "равного 3-ём количества элементов.\nПримеры:\n");
+
+    Examples(array1);
+    Examples(array2);
+    Examples(array3);
+
+Repeat:
+    Console.Write("Введите ряд строковых значений (без кавычек), разделяя их запятыми и/или пробелами: ");
+    string inString = Console.ReadLine(); // считывание введённой пользователем строки
+
+    if (inString.Length == 0)
+        goto Repeat;
+
+    char[] separators = new char[] { ',', ' ' }; // массив разделителей для преобразования строки в
+                                            // строковый массив
+    string[] stringArray = inString.Split(separators, StringSplitOptions.RemoveEmptyEntries); // создание
+                                                                                              // строкового
+                                                                                              // массива
+    Console.Write("Созданный массив: ");
+    ThreeSymbols(stringArray);
+    Console.WriteLine();
+
+Repeat2:
+    Console.Write("Желаете продолжить (y/n)? ");
+
+    input = Console.ReadKey(); // получение кода нажатой клавиши
+    Console.WriteLine();
+
+    if (input.Key == ConsoleKey.Y) // если нажата клавиша с символом «Y»
+    {
+        Console.Clear();
+        goto Repeat;
+    }
+    if (input.Key != ConsoleKey.N) // если не нажата клавиша с символом «N»
+        goto Repeat2;
