@@ -64,4 +64,15 @@ void ThreeSymbols(string[] arrayIn)
         );
 }
 
-Console.InputEncoding = Encoding.Unicode;
+// Обработка примерных массивов, заданных в условии задачи:
+
+void Examples(string[] arrayIn)
+{
+    Console.WriteLine("Исходный массив: [\"{0}\"].", String.Join("\", \"", arrayIn));
+    Console.Write("Созданный массив: ");
+    ThreeSymbols(arrayIn);
+    Console.WriteLine();
+}
+
+Console.InputEncoding = Encoding.Unicode; // в консоли можно вводить символы Юникода, в т.ч. русские
+ConsoleKeyInfo input; // переменная для получения кода клавиши
